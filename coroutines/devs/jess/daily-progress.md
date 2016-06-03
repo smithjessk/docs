@@ -18,3 +18,5 @@
 - **31 May 2016**: Worked more through the Java Bytecode boxing problem. Finished adding the tests from [ToughType.scala](https://github.com/scala/async/blob/master/src/test/scala/scala/async/run/toughtype/ToughType.scala), and added a few from [AnfTransformSpec.scala](https://github.com/scala/async/blob/master/src/test/scala/scala/async/run/anf/AnfTransformSpec.scala). 
 
 - **1 June 2016**: Found and documented [a macro issue](https://github.com/storm-enroute/coroutines/issues/20). Worked through understanding the cause a bit more, and started to set up an environment to debug macros. Continued porting more Async tests. Updated [my first pull request](https://github.com/storm-enroute/coroutines/pull/18) to fit the [Storm Enroute styleguide](http://storm-enroute.com/dev/styleguide/). 
+
+- **2 June 2016**: Imported the rest of the Async tests into Coroutines. Tomorrow, I'm going to work more on understanding the Bytecode issue. I'll also work on fixing [issue 20](https://github.com/storm-enroute/coroutines/issues/20). 
