@@ -20,3 +20,5 @@
 - **1 June 2016**: Found and documented [a macro issue](https://github.com/storm-enroute/coroutines/issues/20). Worked through understanding the cause a bit more, and started to set up an environment to debug macros. Continued porting more Async tests. Updated [my first pull request](https://github.com/storm-enroute/coroutines/pull/18) to fit the [Storm Enroute styleguide](http://storm-enroute.com/dev/styleguide/). 
 
 - **2 June 2016**: Imported the rest of the Async tests into Coroutines. Tomorrow, I'm going to work more on understanding the Bytecode issue. I'll also work on fixing [issue 20](https://github.com/storm-enroute/coroutines/issues/20). 
+
+- **3 and 6 June 2016**: Made [partial progress on issue 20](https://github.com/storm-enroute/coroutines/issues/20#issuecomment-224004035). Worked through some more subtleties that emerged in testing. Worked through the Bytecode issue some more. *NOTE*: This information is split over two days because, to be blunt, neither day was very productive. If I fall behind schedule, I'll work this weekend to catch up. 
