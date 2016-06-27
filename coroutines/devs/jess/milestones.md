@@ -18,7 +18,7 @@ This GSoC project has five stages. Below, each stage is listed along with its su
 #### Allotted Time: 2 Weeks
 - Write a design doc that contains a plan for the implementation of Async/Await. Make sure it pays special attention to failure handling (2 days)
 - Add and document motivating examples that will serve as unit tests (1 day)
-- Implement Async/Await. (5 days) (**Note**: More details will be added here when they are planned out via the design doc)
+- Implement Async/Await. (5 days) 
 - Port remaining example and test code from Scala Async into Coroutines (2 days)
 
 ## Enumerators
