@@ -24,3 +24,7 @@
 - **3 and 6 June 2016**: Made [partial progress on issue 20](https://github.com/storm-enroute/coroutines/issues/20#issuecomment-224004035). Worked through some more subtleties that emerged in testing. Worked through the Bytecode issue some more. *NOTE*: This information is split over two days because, to be blunt, neither day was very productive. If I fall behind schedule, I'll work this weekend to catch up. 
 
 - **7-24 June 2016**: During these weeks, I neglected to track my daily progress. I will try to be better about this starting on 27 June 2016. However, I still made notable progress during this time. I opened [two](https://github.com/storm-enroute/coroutines/pull/22) [PRs](https://github.com/storm-enroute/coroutines/pull/23) and worked on [a](https://github.com/storm-enroute/coroutines/issues/25) [few](https://github.com/storm-enroute/coroutines/issues/24) [issues](https://github.com/storm-enroute/coroutines/issues/20). 
+
+- **27 June 2016**: Worked on the design doc for Enumerators.
+
+- **28 June 2016**: Fixed issues with the the [async PR](https://github.com/storm-enroute/coroutines/pull/23). 
