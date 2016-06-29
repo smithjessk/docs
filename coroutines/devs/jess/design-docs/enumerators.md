@@ -19,14 +19,26 @@
 
 ## Detailed Design
 
+These functions are both defined on a `Coroutine.Instance[Y, R]`. Boxing should be avoided since this class is specialized on `Y`.
+
 ```scala
 import scala.collection._
+import scala.util.{ Success, Failure }
 
-def map[@specialized Y, R](c: Coroutine.Instance[Y, R]) = {
-    var resultList = immutable.Seq[Y]
-    c.foreach { element => 
-      resultList = resultList :+ element
+def foreach(f: (Y) => Unit) {
+  while (resume) {
+    tryValue match {
+      case Success(value) => f(value)
+      case Failure(exception) => throw exception
     }
-    resultList.toList
+  }
+}
+
+def map(f: (Y) => Unit) = {
+  var resultList = immutable.Seq[Y]
+  foreach { element => 
+    resultList = resultList :+ f(element)
+  }
+  resultList.toList
 }
 ```
