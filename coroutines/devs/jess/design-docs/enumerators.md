@@ -34,7 +34,7 @@ def foreach(f: (Y) => Unit) {
   }
 }
 
-def map(f: (Y) => Unit) = {
+def map(f: (Y) => Y) = {
   var resultList = immutable.Seq[Y]
   foreach { element => 
     resultList = resultList :+ f(element)
