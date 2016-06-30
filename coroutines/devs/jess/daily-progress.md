@@ -30,3 +30,5 @@
 - **28 June 2016**: Fixed issues with the the [async PR](https://github.com/storm-enroute/coroutines/pull/23). 
 
 - **29 June 2016**: Implemented functionality for enumerators. Wrote some unit tests to assert that the functionality works. Hit some bugs when creating Iterators out of Coroutines. Tomorrow, I will try to fix those bugs. Also, I will develop test cases that illustrate when enumerators are better than iterators.
+
+- **30 June 2016**: Fixed the bugs from yesterday. Added more test cases. Tried to plan out more what I'm going to do with enumerators. 
