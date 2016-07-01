@@ -32,3 +32,5 @@
 - **29 June 2016**: Implemented functionality for enumerators. Wrote some unit tests to assert that the functionality works. Hit some bugs when creating Iterators out of Coroutines. Tomorrow, I will try to fix those bugs. Also, I will develop test cases that illustrate when enumerators are better than iterators.
 
 - **30 June 2016**: Fixed the bugs from yesterday. Added more test cases. Tried to plan out more what I'm going to do with enumerators. 
+
+- **1 July 2016**: My day was cut short today because I had to take care of some other things. However, I found out that my `foreach` and `map` implementations box. I got some insight about the problem from [this article](http://axel22.github.io/2013/11/03/specialization-quirks.html), but having `foreach` return a `Y` did not fix the problem. I will work on it more this weekend.
