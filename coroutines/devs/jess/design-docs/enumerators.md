@@ -4,41 +4,30 @@
 
 ## Goals
 
-- `foreach` method
-- `map` to return a container
+- Function that converts from a coroutine instance to an enumerator
+- Specialized `Enumerator` class
+- Collection options on the `Enumerator` class, e.g. `foreach`, `map`
+- Unit tests
+- Benchmarks
 
 ## High-Level Overview
 
-- `foreach`
+- Conversion function
 
-  Implemented as a method on `Coroutine.Instance[Y, R]`. Called at all yield points. Not called at the `result` point because this might incur boxing if, for instance, the coroutine returns `Unit`. 
-  
-- `map`
+  The enumerator pauses at all `yield` points. It should not pause at the `result` point because this might incur boxing if, for instance, the coroutine returns `Unit`. 
 
-  Implemented using `foreach`. Returns an `immutable.List[Y]` that is specialized on `Y`. 
+- Specialized `Enumerator` class
 
-## Detailed Design
+  Should be specialized on all primitive types, just like the `Coroutine` trait. 
 
-These functions are both defined on a `Coroutine.Instance[Y, R]`. Boxing should be avoided since this class is specialized on `Y`.
+- Collection methods
 
-```scala
-import scala.collection._
-import scala.util.{ Success, Failure }
+  Should implement, at least, `foreach`, `map`, `flatMap`, `++`, and `fold`. 
 
-def foreach(f: (Y) => Unit) {
-  while (resume) {
-    tryValue match {
-      case Success(value) => f(value)
-      case Failure(exception) => throw exception
-    }
-  }
-}
+- Unit tests
 
-def map(f: (Y) => Y) = {
-  var resultList = immutable.Seq.empty[Y]
-  foreach { element => 
-    resultList = resultList :+ f(element)
-  }
-  resultList.toList
-}
-```
+  Written before the API is implemented. Should test all collection methods and the conversion from coroutine instance to `Enumerator`. 
+
+- Benchmarks
+ 
+  Implemented with Scalameter. Test both speed and amount of boxing.
